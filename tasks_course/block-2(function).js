@@ -45,7 +45,7 @@ isEven(22);
 // Function square(num) → returns square of a number.
 
 function square(num) {
-    return num ** num
+    return num * num
 }
 
 square(10);
@@ -72,7 +72,48 @@ max(765, 567);
 // TASK 7
 // Function min(a, b, c) → returns minimum.
 
+function findMin(a, b, c) {
+    let arr = [];
+    arr.push(a, b, c);
+    let min = Math.min(...arr);
+    return min;
+}
+
+findMin(10, -10, 15);
 
 
+// TASK 8
+// Function getInitials(name, surname) → returns 'A.B'.
+
+function getInitials(name, surname) {
+    let firstNameLetter = name[0];
+    let fishSurnameLetter = surname[0];
+    const result = `${firstNameLetter}.${fishSurnameLetter}`;
+    return result.toUpperCase();
+}
+
+getInitials('Abylaikhan', 'Tursyngazin');
 
 
+// TASK 9
+// Function convertToUSD(kzt) → convert using a chosen rate
+
+function convertToUSD(kzt) {
+    let dollarRate = 472.81 // 4/03/2026 3:40 PM
+    const exchangeKZTToUSD = kzt / dollarRate;
+    return exchangeKZTToUSD.toFixed(2);
+}
+
+convertToUSD(10000);
+
+
+// TASK 10
+// Function repeat(str, n) → repeat string n times.
+
+function repeatString(str, n) {
+    for (let i = 0; i < n; i++) {
+        console.log(str);
+    }
+}
+
+repeatString('Honda', 9);
